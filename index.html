@@ -15,24 +15,26 @@
 
 <section id="en" lang="en">
 <h1>Privacy Policy — Korean Hangul Basic, Korean Hangul Advanced, Korean Hangul Words, Korean Hangul All-in-One (Android · iOS)</h1>
-<p class="meta">Effective date: 2026-10-08 · Operator: HiClone (주식회사 하이클론) · Contact: <a href="mailto:info@hiclone.net">info@hiclone.net</a></p>
+<p class="meta">Effective date: 2026-10-31 · Operator: HiClone (주식회사 하이클론) · Contact: <a href="mailto:info@hiclone.net">info@hiclone.net</a></p>
 
 <p>This policy applies to the Android versions of the four apps above, distributed on Google Play (package names <code>com.hiclone.hangulzzang_app.basic</code>, <code>.middle</code>, <code>.advanced</code> and <code>.full</code>). Sections 1 to 6 describe the Android versions. Section 7 describes how the iOS versions distributed on the App Store differ. If we release the apps on another platform, we will update this policy before that release.</p>
 <p>The apps are free to download. Each app offers one one-time in-app purchase that unlocks that app's full course. The apps do not require an account, show no advertising and contain no advertising identifier or analytics tool of our own.</p>
 
 <h2>1. Information stored on your device</h2>
-<p>Your learning progress and settings, and the record of a verified purchase (product, a transaction reference and the time of verification), are stored on your device. We do not sync this information to HiClone's servers.</p>
+<p>Your learning progress and settings, and the record of a verified purchase (product, a transaction reference and the time of verification), are stored on your device. We do not sync your learning progress or settings to HiClone's servers. Section 2 describes the purchase record our server keeps.</p>
 <p>Depending on your Android settings and the backup or device-transfer method you use, Android may make a copy of this data. Uninstalling the app deletes the app's data on that device. It does not delete copies made elsewhere.</p>
 
 <h2>2. Purchase verification (our server)</h2>
 <p><strong>What the app sends.</strong> Only when you buy or restore the full course, the app sends three items to our verification server over HTTPS: the platform name, the product ID and the purchase token issued by Google Play. It sends nothing else, and it does not ask for your name, email address or any account.</p>
-<p><strong>What the server does.</strong> The server asks Google Play whether the purchase is valid and returns the result to the app. To do this it receives from Google Play the purchase status, the product ID and the order ID. It does not store the purchase token.</p>
+<p><strong>What the server does.</strong> The server asks Google Play whether the purchase is valid and returns the result to the app. To do this it receives from Google Play the purchase status, the product ID, the order ID, the purchase time and the country or region of the purchase. It does not store the purchase token.</p>
+<p><strong>Purchase record.</strong> For each verified purchase the server keeps one record in Google Cloud Firestore (Seoul region): the platform, the product ID, the order ID, the country or region of the purchase, the purchase time, when and how many times the purchase was verified, and whether it was later refunded or canceled. Google Play also notifies our server when a purchase is completed, canceled or refunded, and we update the record. The record contains no name, email address, payment details or purchase token. We use it to confirm purchases, to handle refunds and purchase inquiries, to prevent fraudulent purchase claims and to count sales. Only authorized HiClone staff can view it, through an internal management page.</p>
 <p><strong>What is logged.</strong> The server runs on Google Cloud Run (Seoul region), which processes requests for us as our hosting provider. Request logs record the IP address, device user agent, requested address, time and response status. The server also logs the product ID, the verification result and the first 8 characters of the order ID. We use these logs only to operate the service, to fix errors and to prevent fraudulent purchase claims. We do not use them to identify or track you.</p>
-<p><strong>How long.</strong> Under our current settings these logs are deleted automatically after 30 days. If we change this period, we will update this policy before the change takes effect.</p>
+<p><strong>How long.</strong> Under our current settings request logs are deleted automatically after 30 days. Purchase records are kept for 5 years from the purchase, or from the refund or cancellation if that is later, and are then deleted automatically. If we change these periods, we will update this policy before the change takes effect.</p>
 
 <h2>3. Other providers that receive information</h2>
 <ul>
 <li><strong>Google Play (payments and purchase checks).</strong> Google Play processes your payment under its own terms and privacy policy. We never receive your payment card details.</li>
+<li><strong>Cloudflare (internal management page).</strong> The management page through which our staff view the purchase records in section 2 is hosted on Cloudflare, which processes those records for us when staff open the page.</li>
 <li><strong>Google Play Billing Library (included in the app).</strong> To connect to Google Play's payment system, the app includes Google's billing library. When the app starts, this library sends technical diagnostic information to Google. In our own testing this included the library and app version, package name, Android version, device manufacturer and model, language and region settings, network type, mobile carrier code, time zone and the result code of the billing connection. Google processes this information under the Google Privacy Policy. We do not receive it.</li>
 <li><strong>Speech recognition service (optional).</strong> Read-aloud practice is optional. It asks for microphone permission and uses the speech recognition service selected on your device, but only when that service is provided by Google (the Google app or Speech Services by Google). If another service is selected or none is available, the app does not offer the microphone check; you can still read aloud and compare with the answer video. Google may process your voice on its servers to recognize it, under the Google Privacy Policy. According to the data safety information Google publishes for these services on Google Play, they encrypt data in transit. The app itself does not receive or store audio. It receives only the recognized text, uses it immediately to check your answer and does not store or send it. The app shows this notice before it first asks for microphone permission. You can refuse or withdraw microphone permission at any time in system settings, and the rest of the app keeps working.</li>
 </ul>
@@ -42,16 +44,16 @@
 <p>The apps are intended for users aged 13 and over. They are not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child under 13 has given us personal information, contact us at <a href="mailto:info@hiclone.net">info@hiclone.net</a> and we will delete the information we hold.</p>
 
 <h2>5. Your choices and contact</h2>
-<p>You can use the free lessons without buying anything and without microphone permission. For questions about this policy or about the server logs described in section 2, contact <a href="mailto:info@hiclone.net">info@hiclone.net</a>.</p>
+<p>You can use the free lessons without buying anything and without microphone permission. For questions about this policy or about the server logs and purchase records described in section 2, or to ask us to show or delete your purchase record, contact <a href="mailto:info@hiclone.net">info@hiclone.net</a> with your order ID (on iOS, your transaction ID). We may keep a record where the law requires it.</p>
 
 <h2>6. Changes</h2>
-<p>We will post changes to this policy on this page and update the effective date. This includes any change to the log retention period in section 2 and any new provider.</p>
+<p>We will post changes to this policy on this page and update the effective date. This includes any change to the retention periods in section 2 and any new provider.</p>
 
 <h2>7. iOS versions (App Store)</h2>
 <p>This policy also applies to the iOS versions of the four apps, distributed on the App Store (bundle IDs <code>com.hiclone.hangulzzang.basic</code>, <code>.complete</code>, <code>.advanced</code> and <code>com.hiclone.hangulzzang</code>). Sections 1 to 6 apply to them, with the following differences.</p>
 <ul>
 <li><strong>Information stored on your device.</strong> Depending on your iCloud or computer backup settings, iOS may include the app's data in your backups.</li>
-<li><strong>Purchase verification.</strong> Only when you buy or restore the full course, the app sends the platform name, the product ID and the signed transaction issued by the App Store to our verification server over HTTPS. The server checks Apple's signature, the app and the product, and whether the purchase was refunded, and returns the result. It does not store the signed transaction. It logs the product ID, the verification result and the first 8 characters of the transaction ID, together with the request logs described in section 2. If our server cannot be reached, the app checks Apple's signature on the device instead.</li>
+<li><strong>Purchase verification.</strong> Only when you buy or restore the full course, the app sends the platform name, the product ID and the signed transaction issued by the App Store to our verification server over HTTPS. The server checks Apple's signature, the app and the product, and whether the purchase was refunded, and returns the result. It does not store the signed transaction. It keeps the purchase record described in section 2, with the original transaction ID in place of the order ID and the App Store country or region, and the App Store notifies our server of purchases, refunds and revocations. It logs the product ID, the verification result and the first 8 characters of the transaction ID, together with the request logs described in section 2. If our server cannot be reached, the app checks Apple's signature on the device instead.</li>
 <li><strong>Payments.</strong> Apple processes your payment under its own terms and the Apple Privacy Policy. We never receive your payment card details. The iOS versions do not include the Google Play Billing Library.</li>
 <li><strong>Speech recognition (optional).</strong> When you tap the microphone, the app asks for microphone and speech recognition permission and uses Apple's speech recognition. Apple may process your voice on its servers to recognize it, under the Apple Privacy Policy. The app receives only the recognized text, uses it immediately to check your answer and does not store or send it. You can refuse or withdraw these permissions at any time in Settings, and the rest of the app keeps working.</li>
 <li><strong>Voice guidance.</strong> Spoken guidance in guided mode is generated on your device by iOS.</li>
@@ -62,24 +64,26 @@
 
 <section id="ko" lang="ko">
 <h1>개인정보처리방침 — 한국어 한글 베이직 · 어드밴스트 · 워즈 · 올인원 (Android · iOS)</h1>
-<p class="meta">시행일: 2026-10-08 · 운영자: 주식회사 하이클론(HiClone) · 문의: <a href="mailto:info@hiclone.net">info@hiclone.net</a></p>
+<p class="meta">시행일: 2026-10-31 · 운영자: 주식회사 하이클론(HiClone) · 문의: <a href="mailto:info@hiclone.net">info@hiclone.net</a></p>
 
 <p>이 방침은 Google Play로 배포하는 위 네 앱의 Android 버전(패키지 <code>com.hiclone.hangulzzang_app.basic</code>, <code>.middle</code>, <code>.advanced</code>, <code>.full</code>)에 적용됩니다. 1~6항은 Android 버전을, 7항은 App Store로 배포하는 iOS 버전의 차이를 설명합니다. 다른 플랫폼에 출시하게 되면 출시 전에 이 방침을 갱신합니다.</p>
 <p>네 앱은 무료로 내려받을 수 있고, 각 앱의 전체 과정은 그 앱 안의 일회성 구매 하나로 열립니다. 계정이 필요 없고, 광고를 보여 주지 않으며, 광고 식별자나 자체 분석 도구가 없습니다.</p>
 
 <h2>1. 기기에 저장되는 정보</h2>
-<p>학습 진도와 설정, 검증된 구매 기록(상품, 거래 참조값, 확인 시각)은 기기에 저장되며 하이클론 서버로 동기화하지 않습니다.</p>
+<p>학습 진도와 설정, 검증된 구매 기록(상품, 거래 참조값, 확인 시각)은 기기에 저장됩니다. 학습 진도와 설정은 하이클론 서버로 동기화하지 않습니다. 저희 서버가 보관하는 구매 기록은 2항에서 설명합니다.</p>
 <p>Android 설정과 백업·기기 이전 방식에 따라 사본이 만들어질 수 있습니다. 앱 삭제는 해당 기기의 앱 데이터를 삭제하며, 다른 곳의 사본까지 삭제하지는 않습니다.</p>
 
 <h2>2. 구매 확인(저희 서버)</h2>
 <p><strong>앱이 보내는 정보.</strong> 전체 과정을 구매하거나 복원할 때에만, 앱은 플랫폼 이름·상품 ID·Google Play가 발급한 구매 토큰 세 가지를 HTTPS로 검증 서버에 보냅니다. 그 밖의 정보는 보내지 않으며, 이름·이메일·계정을 요구하지 않습니다.</p>
-<p><strong>서버가 하는 일.</strong> 서버는 Google Play에 구매가 유효한지 확인한 뒤 결과를 앱에 돌려줍니다. 이를 위해 Google Play로부터 구매 상태·상품 ID·주문 번호를 받습니다. 구매 토큰은 저장하지 않습니다.</p>
+<p><strong>서버가 하는 일.</strong> 서버는 Google Play에 구매가 유효한지 확인한 뒤 결과를 앱에 돌려줍니다. 이를 위해 Google Play로부터 구매 상태·상품 ID·주문 번호·구매 시각·구매 국가 또는 지역을 받습니다. 구매 토큰은 저장하지 않습니다.</p>
+<p><strong>구매 기록.</strong> 서버는 확인된 구매마다 기록 하나를 Google Cloud Firestore(서울 리전)에 보관합니다. 기록 항목은 플랫폼, 상품 ID, 주문 번호, 구매 국가 또는 지역, 구매 시각, 구매 확인 시각과 횟수, 이후 환불·취소 여부입니다. Google Play는 구매 완료·취소·환불을 저희 서버에 직접 알려 주며, 저희는 그에 따라 기록을 갱신합니다. 기록에는 이름·이메일 주소·결제 정보·구매 토큰이 들어 있지 않습니다. 이 기록은 구매 확인, 환불·구매 문의 처리, 부정한 구매 주장 방지, 판매 집계에만 쓰며, 권한을 받은 하이클론 직원만 내부 관리 화면에서 볼 수 있습니다.</p>
 <p><strong>기록되는 정보.</strong> 서버는 Google Cloud Run(서울 리전)에서 동작하며, Google Cloud가 호스팅 사업자로서 저희를 대신해 요청을 처리합니다. 요청 기록에는 IP 주소, 기기 User-Agent, 요청 주소, 시각, 응답 상태가 남습니다. 서버는 상품 ID, 확인 결과, 주문 번호 앞 8자리도 기록합니다. 이 기록은 서비스 운영, 오류 수정, 부정한 구매 주장 방지에만 쓰며, 이용자를 식별하거나 추적하는 데 쓰지 않습니다.</p>
-<p><strong>보관 기간.</strong> 현재 설정에서 이 기록은 30일 뒤 자동으로 삭제됩니다. 이 기간을 바꾸게 되면 변경이 적용되기 전에 이 방침을 갱신합니다.</p>
+<p><strong>보관 기간.</strong> 현재 설정에서 요청 기록은 30일 뒤 자동으로 삭제됩니다. 구매 기록은 구매일(환불·취소가 있으면 그 날 중 늦은 날)부터 5년간 보관한 뒤 자동으로 삭제합니다. 이 기간을 바꾸게 되면 변경이 적용되기 전에 이 방침을 갱신합니다.</p>
 
 <h2>3. 정보를 받는 그 밖의 제공자</h2>
 <ul>
 <li><strong>Google Play(결제·구매 확인).</strong> 결제는 Google Play가 자체 약관과 개인정보처리방침에 따라 처리하며, 저희는 카드 정보를 받지 않습니다.</li>
+<li><strong>Cloudflare(내부 관리 화면).</strong> 직원이 2항의 구매 기록을 보는 관리 화면은 Cloudflare에서 운영되며, 직원이 화면을 열 때 Cloudflare가 저희를 대신해 그 기록을 처리합니다.</li>
 <li><strong>Google Play 결제 라이브러리(앱에 포함).</strong> Google Play 결제에 연결하려고 앱에 Google의 결제 라이브러리가 들어 있습니다. 이 라이브러리는 앱이 시작될 때 기술 진단 정보를 Google에 보냅니다. 저희 시험에서 확인한 항목은 라이브러리·앱 버전, 패키지명, Android 버전, 기기 제조사·모델, 언어·지역 설정, 네트워크 유형, 통신사 코드, 시간대, 결제 연결 결과 코드입니다. Google은 이 정보를 Google 개인정보처리방침에 따라 처리하며, 저희는 이 정보를 받지 않습니다.</li>
 <li><strong>음성 인식 서비스(선택).</strong> 소리 내어 읽기는 선택 기능입니다. 마이크 권한을 요청하고, 기기에 설정된 음성 인식 서비스가 Google의 서비스(Google 앱 또는 Speech Services by Google)일 때에만 그 서비스를 사용합니다. 다른 서비스가 설정되어 있거나 서비스가 없으면 마이크 확인 기능을 제공하지 않으며, 이때도 소리 내어 읽고 정답 영상과 비교할 수 있습니다. Google은 인식을 위해 음성을 자사 서버에서 처리할 수 있으며, 이는 Google 개인정보처리방침을 따릅니다. Google이 Google Play에 공개한 이 서비스들의 데이터 보안 정보에 따르면 전송 중 데이터는 암호화됩니다. 앱은 음성을 받거나 저장하지 않고, 인식된 글자만 받아 답 확인에 바로 쓴 뒤 저장·전송하지 않습니다. 앱은 마이크 권한을 처음 요청하기 전에 이 내용을 안내합니다. 마이크 권한은 시스템 설정에서 언제든 거부·철회할 수 있으며, 그래도 나머지 기능은 그대로 쓸 수 있습니다.</li>
 </ul>
@@ -89,16 +93,16 @@
 <p>네 앱은 만 13세 이상 이용자를 대상으로 합니다. 만 13세 미만 아동을 대상으로 하지 않으며, 만 13세 미만 아동의 개인정보를 알면서 수집하지 않습니다. 만 13세 미만 아동이 저희에게 개인정보를 제공했다고 생각되면 <a href="mailto:info@hiclone.net">info@hiclone.net</a>으로 알려 주세요. 저희가 가진 정보를 삭제합니다.</p>
 
 <h2>5. 이용자의 선택과 문의</h2>
-<p>구매나 마이크 권한 없이도 무료 학습을 이용할 수 있습니다. 이 방침이나 2항의 서버 기록에 관한 문의: <a href="mailto:info@hiclone.net">info@hiclone.net</a></p>
+<p>구매나 마이크 권한 없이도 무료 학습을 이용할 수 있습니다. 이 방침이나 2항의 서버 기록·구매 기록에 관한 문의, 구매 기록 열람·삭제 요청은 주문 번호(iOS는 거래 ID)와 함께 <a href="mailto:info@hiclone.net">info@hiclone.net</a>으로 보내 주세요. 법이 보관을 요구하는 기록은 보관할 수 있습니다.</p>
 
 <h2>6. 변경</h2>
-<p>방침을 바꾸면 이 페이지에 게시하고 시행일을 갱신합니다. 2항의 기록 보관 기간 변경과 새 제공자 추가도 여기에 포함됩니다.</p>
+<p>방침을 바꾸면 이 페이지에 게시하고 시행일을 갱신합니다. 2항의 보관 기간 변경과 새 제공자 추가도 여기에 포함됩니다.</p>
 
 <h2>7. iOS 버전(App Store)</h2>
 <p>이 방침은 App Store로 배포하는 네 앱의 iOS 버전(번들 ID <code>com.hiclone.hangulzzang.basic</code>, <code>.complete</code>, <code>.advanced</code>, <code>com.hiclone.hangulzzang</code>)에도 적용됩니다. 1~6항이 그대로 적용되며, 다른 점은 다음과 같습니다.</p>
 <ul>
 <li><strong>기기에 저장되는 정보.</strong> iCloud 또는 컴퓨터 백업 설정에 따라 iOS가 앱 데이터를 백업에 포함할 수 있습니다.</li>
-<li><strong>구매 확인.</strong> 전체 과정을 구매하거나 복원할 때에만, 앱은 플랫폼 이름·상품 ID·App Store가 발급한 서명된 거래 정보를 HTTPS로 검증 서버에 보냅니다. 서버는 Apple 서명과 앱·상품, 환불 여부를 확인해 결과를 돌려주며, 서명된 거래 정보는 저장하지 않습니다. 2항의 요청 기록과 함께 상품 ID·확인 결과·거래 ID 앞 8자리를 기록합니다. 저희 서버에 연결할 수 없으면 앱이 기기에서 Apple 서명을 확인합니다.</li>
+<li><strong>구매 확인.</strong> 전체 과정을 구매하거나 복원할 때에만, 앱은 플랫폼 이름·상품 ID·App Store가 발급한 서명된 거래 정보를 HTTPS로 검증 서버에 보냅니다. 서버는 Apple 서명과 앱·상품, 환불 여부를 확인해 결과를 돌려주며, 서명된 거래 정보는 저장하지 않습니다. 2항의 구매 기록을 보관하되 주문 번호 대신 원 거래 ID, App Store 국가 또는 지역을 기록하며, App Store는 구매·환불·철회를 저희 서버에 알려 줍니다. 2항의 요청 기록과 함께 상품 ID·확인 결과·거래 ID 앞 8자리를 기록합니다. 저희 서버에 연결할 수 없으면 앱이 기기에서 Apple 서명을 확인합니다.</li>
 <li><strong>결제.</strong> 결제는 Apple이 자체 약관과 Apple 개인정보 처리방침에 따라 처리하며, 저희는 카드 정보를 받지 않습니다. iOS 버전에는 Google Play 결제 라이브러리가 들어 있지 않습니다.</li>
 <li><strong>음성 인식(선택).</strong> 마이크를 누르면 마이크·음성 인식 권한을 요청하고 Apple 음성 인식을 사용합니다. Apple은 인식을 위해 음성을 자사 서버에서 처리할 수 있으며, 이는 Apple 개인정보 처리방침을 따릅니다. 앱은 인식된 글자만 받아 답 확인에 바로 쓴 뒤 저장·전송하지 않습니다. 이 권한은 설정에서 언제든 거부·철회할 수 있으며, 그래도 나머지 기능은 그대로 쓸 수 있습니다.</li>
 <li><strong>음성 안내.</strong> 가이드 모드의 음성 안내는 iOS가 기기에서 만듭니다.</li>
